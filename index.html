@@ -105,7 +105,7 @@
             <i class="fa-brands fa-telegram"></i> Записатись на консультацію
           </a>
         </div>
-        <img src="images/1.png" alt="Вероніка Мусієнко | Астропсихологиня" />
+        <img src="images/main.JPG" alt="Вероніка Мусієнко | Астропсихологиня" />
       </div>
     </header>
 
@@ -120,7 +120,7 @@
             <span class="exp-num">01</span>
             <h3>Практика і досвід</h3>
             <p>
-              З турботою допомагаю пізнати себе через мову зірок. Маю понад
+              Маю понад
               <b>3 роки практики</b> і <b>2500 годин теорії</b>. За цей час
               провела десятки консультацій, допомагаючи людям зрозуміти свої
               сильні сторони, таланти й знайти свій напрямок. Працюю м’яко,
@@ -295,21 +295,6 @@
         <div class="faq-list">
           <div class="faq-item">
             <button class="faq-question">
-              Хто така Вероніка Мусієнко?<span class="faq-icon">+</span>
-            </button>
-            <div class="faq-answer">
-              <p>
-                Мене звати Вероніка Мусієнко — я астропсихологиня. З турботою
-                допомагаю людям пізнати себе через мову зірок. Мій підхід
-                поєднує астрологію, психологію та глибоке розуміння людської
-                природи, щоб допомогти вам відчути опору, ясність і гармонію
-                всередині.
-              </p>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question">
               Кому підходить астропсихологічна консультація?<span
                 class="faq-icon"
                 >+</span
@@ -335,13 +320,19 @@
             </button>
             <div class="faq-answer">
               <ul>
-                <li>Онлайн через Zoom або Google Meet;</li>
+                <li>Можливість оффлайн зустрічі у Києві</li>
+                <li>
+                  Онлайн через Zoom, Google Meet або зручний для вас месенджер.
+                </li>
                 <li>Тривалість — 60–90 хвилин;</li>
                 <li>
                   Ми обговорюємо вашу натальну карту, життєві запити та
                   відповіді, які вона відкриває;
                 </li>
-                <li>Після зустрічі ви отримуєте запис сесії.</li>
+                <li>
+                  Після зустрічі ви отримуєте зручний файловий документ для
+                  самостійного читання або, за потреби, запис сесії.
+                </li>
               </ul>
             </div>
           </div>
@@ -452,14 +443,61 @@
       </div>
     </section>
 
-    <section id="reviews">
-      <div class="reviews container">
+    <section id="reviews" class="reviews-section">
+      <div class="container">
         <div class="section-title">
           <h2>Ваші</h2>
           <span>Відгуки</span>
         </div>
-        <p>Люблю читати ваші відгуки!</p>
-        <img src="images/reviews.png" alt="Ваші Відгуки" />
+
+        <div class="carousel-wrapper">
+          <button class="carousel-btn prev">
+            <i class="fa fa-chevron-left"></i>
+          </button>
+
+          <div class="phone-carousel">
+            <div class="phone">
+              <div class="screen">
+                <img src="images/r1.jpg" alt="Відгук 1" />
+              </div>
+            </div>
+            <div class="phone">
+              <div class="screen">
+                <img src="images/r2.jpg" alt="Відгук 2" />
+              </div>
+            </div>
+            <div class="phone">
+              <div class="screen">
+                <img src="images/r3.png" alt="Відгук 3" />
+              </div>
+            </div>
+            <div class="phone">
+              <div class="screen">
+                <img src="images/r4.png" alt="Відгук 4" />
+              </div>
+            </div>
+            <div class="phone">
+              <div class="screen">
+                <img src="images/r5.jpg" alt="Відгук 5" />
+              </div>
+            </div>
+            <div class="phone">
+              <div class="screen">
+                <img src="images/r6.jpg" alt="Відгук 6" />
+              </div>
+            </div>
+            <div class="phone">
+              <div class="screen">
+                <img src="images/r7.jpg" alt="Відгук 7" />
+              </div>
+            </div>
+          </div>
+
+          <button class="carousel-btn next">
+            <i class="fa fa-chevron-right"></i>
+          </button>
+        </div>
+
         <a href="https://t.me/MusiienkoVeronika" target="_blank" class="btn">
           <i class="fa-brands fa-telegram"></i> Написати відгук
         </a>
@@ -476,10 +514,7 @@
 
           <p>
             Зв’яжіться зі мною, якщо ви шукаєте відповіді, ясність або натхнення
-            на своєму шляху. Я
-            <span>з турботою допоможу вам </span>пізнати себе через мову зірок,
-            <span>зрозуміти свої внутрішні потреби</span>, потенціал і знайти
-            гармонію між душею та життям.
+            на своєму шляху.
           </p>
           <a href="https://t.me/MusiienkoVeronika" target="_blank" class="btn">
             <i class="fa-brands fa-telegram"></i> Записатись на консультацію
@@ -652,6 +687,48 @@
           nav.classList.remove("open");
           h.classList.remove("open");
           burger.classList.remove("active");
+        });
+      });
+    </script>
+
+    <script>
+      window.addEventListener("load", () => {
+        const carousel = document.querySelector(".phone-carousel");
+        const prevBtn = document.querySelector(".carousel-btn.prev");
+        const nextBtn = document.querySelector(".carousel-btn.next");
+        const scrollStep = 250;
+
+        prevBtn.addEventListener("click", () => {
+          carousel.scrollBy({ left: -scrollStep, behavior: "smooth" });
+        });
+
+        nextBtn.addEventListener("click", () => {
+          carousel.scrollBy({ left: scrollStep, behavior: "smooth" });
+        });
+
+        let autoScroll = setInterval(() => {
+          carousel.scrollBy({ left: scrollStep, behavior: "smooth" });
+          if (
+            carousel.scrollLeft + carousel.clientWidth >=
+            carousel.scrollWidth
+          ) {
+            carousel.scrollTo({ left: 0, behavior: "smooth" });
+          }
+        }, 4000);
+
+        carousel.addEventListener("mouseenter", () =>
+          clearInterval(autoScroll)
+        );
+        carousel.addEventListener("mouseleave", () => {
+          autoScroll = setInterval(() => {
+            carousel.scrollBy({ left: scrollStep, behavior: "smooth" });
+            if (
+              carousel.scrollLeft + carousel.clientWidth >=
+              carousel.scrollWidth
+            ) {
+              carousel.scrollTo({ left: 0, behavior: "smooth" });
+            }
+          }, 4000);
         });
       });
     </script>

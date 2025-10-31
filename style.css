@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poiret+One&display=swap");
 
 @font-face {
   font-family: "Disruptor";
@@ -13,6 +13,7 @@
   --white: #ffffff;
   --black: #333333;
   --green: #72816e;
+  --font-logo: "Poiret One", sans-serif;
   --font-main: "Montserrat", sans-serif;
   --font-serif: "Great Vibes", sans-serif;
   --font-head: "Disruptor", sans-serif;
@@ -98,7 +99,7 @@ body {
   left: 0;
   width: 100%;
   background: var(--white);
-  padding: 0;
+  padding: 0 0 60px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
   z-index: 1000;
   min-height: 100vh;
@@ -153,9 +154,10 @@ body {
 }
 
 .logo span {
-  font-family: var(--font-serif);
-  font-size: 50px;
+  font-family: var(--font-logo);
+  font-size: 40px;
   line-height: 1;
+  margin-top: -10px;
 }
 
 .nav {
@@ -188,7 +190,7 @@ body {
   flex-direction: column;
   gap: 5px;
   cursor: pointer;
-  padding-top: 25px;
+  padding-top: 15px;
 }
 
 .burger span {
@@ -219,7 +221,7 @@ body {
 @media (max-width: 1048px) {
   .nav {
     position: absolute;
-    top: 90px;
+    top: 70px;
     right: 0;
     background: var(--green);
     height: 70vh;
@@ -268,7 +270,7 @@ body {
 }
 
 .hero > img {
-  max-height: 70vh;
+  width: 35vw;
 }
 
 .hero-container {
@@ -299,10 +301,11 @@ body {
 }
 
 .hero__title b {
-  font-family: var(--font-serif);
-  padding: 5px 25px;
+  font-family: var(--font-logo);
+  padding: 0 15px 5px;
   background-color: var(--green);
   color: #fff;
+  line-height: 1;
   border-radius: 30px;
   width: max-content;
   white-space: nowrap;
@@ -327,7 +330,7 @@ body {
 }
 
 .btn {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 10px;
   background: var(--beige);
@@ -337,8 +340,10 @@ body {
   text-transform: uppercase;
   border-radius: 130px;
   height: max-content;
+  font-family: var(--font-logo);
   margin: auto;
   justify-content: center;
+  font-weight: 600;
   box-shadow: -4px 3px 27px -3px rgba(0, 0, 0, 0.75);
 }
 
@@ -541,7 +546,7 @@ h3 {
   font-size: 22px;
   margin-bottom: 16px;
   color: var(--blue);
-  font-family: var(--font-heading);
+  font-family: var(--font-logo);
   text-transform: uppercase;
   min-height: 3em;
 }
@@ -550,6 +555,7 @@ h3 {
   color: var(--text-dark);
   line-height: 1.6;
   font-size: 17px;
+  text-indent: 20px;
 }
 .experience .logo {
   margin-top: 50px;
@@ -700,6 +706,7 @@ h3 {
 }
 
 .client-btn {
+  font-family: var(--font-logo);
   position: absolute;
   bottom: 20px;
   background: var(--white);
@@ -893,6 +900,10 @@ h3 {
   font-family: var(--font-serif);
 }
 
+.about-text {
+  text-align: center;
+}
+
 .about-text p {
   text-transform: none;
   font-weight: 400;
@@ -969,14 +980,11 @@ footer a {
   color: var(--black);
 }
 
-.reviews .section-title {
-  margin-bottom: 5px;
-}
 #reviews {
   padding: 60px 0;
 }
 .contacts .logo {
-  margin-top: 50px;
+  margin-top: 35px;
 }
 @media (max-width: 700px) {
   .faq {
@@ -984,7 +992,7 @@ footer a {
   }
   .faq-question {
     font-size: 14px;
-    padding: 8px 10px;
+    padding: 8px 10px 8px 21px;
   }
   .faq-icon {
     font-size: 24px;
@@ -997,17 +1005,142 @@ footer a {
   }
   .about-text p {
     font-size: 20px;
-    display: inline;
+    display: inline-block;
+    text-align: center;
+    margin-bottom: 30px;
   }
   .contacts .social {
     flex-wrap: wrap;
     max-width: 300px;
-    margin: auto;
+    margin: 40px auto 0;
   }
   .logo h2 {
     font-size: 20px;
   }
   #contacts {
     padding-bottom: 15px;
+  }
+  .section-title {
+    margin-bottom: 20px;
+  }
+  .logo span {
+    font-size: 32px;
+  }
+}
+
+.reviews-section .container {
+  text-align: center;
+}
+
+.carousel-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.phone-carousel {
+  display: flex;
+  gap: 30px;
+  overflow-x: auto;
+  padding: 40px 0;
+  scrollbar-width: none;
+  width: 100%;
+  max-width: 1000px;
+}
+.phone-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.phone {
+  flex: 0 0 auto;
+  width: 220px;
+  height: 420px;
+  background: #111;
+  border-radius: 40px;
+  padding: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  scroll-snap-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.5s ease;
+}
+.phone:hover {
+  transform: scale(1.05);
+}
+
+.phone::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 6px;
+  background: #222;
+  border-radius: 10px;
+}
+
+.screen {
+  border-radius: 30px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(images/phone.jpg);
+}
+
+.screen img {
+  border-radius: 30px;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.7);
+  border: none;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  cursor: pointer;
+  color: #333;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+
+.carousel-btn:hover {
+  background: #fff;
+  color: #000;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-btn.prev {
+  left: -25px;
+}
+.carousel-btn.next {
+  right: -25px;
+}
+
+@media (max-width: 768px) {
+  .carousel-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 14px;
+  }
+  .carousel-btn.prev {
+    left: 5px;
+  }
+  .carousel-btn.next {
+    right: 5px;
   }
 }
