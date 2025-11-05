@@ -556,6 +556,7 @@ h2 {
 
 .title {
   font-family: var(--font-logo);
+  text-align: center;
 }
 
 h3 {
