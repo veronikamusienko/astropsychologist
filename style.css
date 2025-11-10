@@ -318,23 +318,24 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  background: var(--green);
-  color: #fff;
+  background: var(--beige);
+  color: var(--black);
   padding: 12px 25px;
-  font-size: 20px;
+  font-size: 18px;
   border-radius: 130px;
   letter-spacing: 1px;
   height: max-content;
+  text-transform: uppercase;
   font-family: var(--font-logo);
   margin: auto;
   justify-content: center;
-  font-weight: 600;
+  font-weight: 900;
   box-shadow: -4px 3px 7px -3px rgba(0, 0, 0, 0.15);
 }
 
 .btn:hover {
-  color: var(--black);
-  background-color: var(--beige);
+  color: #fff;
+  background-color: var(--green);
 }
 .btn i {
   font-size: 30px;
@@ -1358,20 +1359,30 @@ footer a {
 
 .back-card {
   background: linear-gradient(
-    rgba(114, 129, 110, 0.45),
-    rgba(114, 129, 110, 0.25)
+    rgba(114, 129, 110, 0.25),
+    rgba(114, 129, 110, 0.15)
   );
 }
 
-/* .back {
-  background-image: url("images/back.JPG");
-  background-size: cover;
-  background-position: top;
+.back {
   width: 100%;
   position: absolute;
   left: 0;
   z-index: -1;
   filter: grayscale(100%);
+  opacity: 0.9;
+  background: linear-gradient(
+      to top,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(255, 255, 255, 1) 10%,
+      rgba(255, 255, 255, 0.8) 20%,
+      rgba(255, 255, 255, 0.5) 40%,
+      rgba(255, 255, 255, 0.5) 50%,
+      rgba(255, 255, 255, 0.8) 80%,
+      rgba(255, 255, 255, 1) 100%
+    ),
+    url(images/main.JPG) center / cover no-repeat;
+  background-position: 0 50%;
 }
 
 .back::before {
@@ -1381,4 +1392,10 @@ footer a {
   left: 0;
   right: 0;
   bottom: 0;
-} */
+}
+
+@media (max-width: 768px) {
+  .back {
+    display: none;
+  }
+}
