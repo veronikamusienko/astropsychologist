@@ -134,7 +134,7 @@
               </p>
             </div>
 
-            <div class="exp-card">
+            <div class="exp-card back-card">
               <h3>Професійна підготовка</h3>
               <p>
                 Маю фахову освіту за напрямком
@@ -202,7 +202,7 @@
 
           <div
             class="client-card"
-            style="background-image: url('images/2.jpg')"
+            style="background-image: url('images/11.jpg')"
           >
             <div class="client-overlay">
               <h3>Гороскоп сумісності</h3>
@@ -598,8 +598,20 @@
     </div>
 
     <script>
+      const header = document.querySelector(".header");
+      const block = document.querySelector(".back");
+
+      function setBlockHeight() {
+        block.style.height = header.offsetHeight + "px";
+      }
+
+      window.addEventListener("resize", setBlockHeight);
+      setBlockHeight();
+    </script>
+
+    <script>
       (() => {
-        const total = 7;
+        const total = 5;
         const base = "images/certificates";
 
         const root = document.querySelector(".certs-carousel");

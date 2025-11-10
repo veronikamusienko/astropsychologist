@@ -98,17 +98,6 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  background: linear-gradient(
-    to top,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(255, 255, 255, 0.9) 10%,
-    rgba(255, 255, 255, 0.9) 20%,
-    rgba(255, 255, 255, 0.7) 40%,
-    rgba(255, 255, 255, 0.6) 50%,
-    rgba(255, 255, 255, 0.8) 70%,
-    rgba(255, 255, 255, 1) 100%
-  );
-  background-color: var(--green);
   padding: 0 0 60px;
   z-index: 1000;
   min-height: 100vh;
@@ -329,10 +318,10 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  background: var(--beige);
-  color: var(--black);
+  background: var(--green);
+  color: #fff;
   padding: 12px 25px;
-  font-size: 18px;
+  font-size: 20px;
   border-radius: 130px;
   letter-spacing: 1px;
   height: max-content;
@@ -344,8 +333,8 @@ body {
 }
 
 .btn:hover {
-  color: #fff;
-  background-color: var(--green);
+  color: var(--black);
+  background-color: var(--beige);
 }
 .btn i {
   font-size: 30px;
@@ -1232,20 +1221,21 @@ footer a {
 .certs-track {
   list-style: none;
   position: relative;
-  height: 200px;
+  height: 250px;
 }
 
 .certs-slide {
   position: absolute;
   top: 0;
   left: 50%;
-  width: 260px;
-  height: 180px;
+  width: 385px;
+  height: 275px;
   transform: translate3d(-50%, 0, 0);
   transition: transform 0.5s ease, opacity 0.5s ease;
   cursor: pointer;
   border-radius: 16px;
   overflow: hidden;
+  border: 2px solid var(--green);
 }
 
 .certs-slide img {
@@ -1365,3 +1355,30 @@ footer a {
 .experience .exp-card {
   overflow: hidden;
 }
+
+.back-card {
+  background: linear-gradient(
+    rgba(114, 129, 110, 0.45),
+    rgba(114, 129, 110, 0.25)
+  );
+}
+
+/* .back {
+  background-image: url("images/back.JPG");
+  background-size: cover;
+  background-position: top;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  z-index: -1;
+  filter: grayscale(100%);
+}
+
+.back::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+} */
